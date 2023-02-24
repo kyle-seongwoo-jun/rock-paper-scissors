@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>✊✌️✋</title>
+    <style>
+		#center {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+            text-align: center;
+		}
+        #hand {
+			font-size: 5em;
+			padding: 0.5em;
+		}
+		button {
+			font-size: 2em;
+			padding: 0.5em 1em;
+		}
+	</style>
     <script>
         function getRandomInt(min, max) {
             let randomInt;
@@ -42,7 +59,9 @@
     </script>
 </head>
 <body>
-    <button onclick="showRandomHand()">✊✌️✋</button>
-    <h1 id="hand"></h1>
+    <div id="center">
+        <h1 id="hand">0 ✊</h1>
+        <button onclick="showRandomHand()">✊✌️✋</button>
+    </div>
 </body>
 </html>
