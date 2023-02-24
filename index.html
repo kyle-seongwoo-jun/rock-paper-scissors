@@ -56,11 +56,13 @@
             let hand = getHand();
             document.getElementById("hand").innerHTML = `${++trial} ${hand}`;
         }
+
+        showRandomHand();
     </script>
 </head>
 <body>
     <div id="center">
-        <h1 id="hand">0 ✊</h1>
+        <h1 id="hand"></h1>
         <button onclick="showRandomHand()">✊✌️✋</button>
     </div>
 </body>
