@@ -57,7 +57,9 @@
             document.getElementById("hand").innerHTML = `${++trial} ${hand}`;
         }
 
-        showRandomHand();
+        window.onload = function() {
+            showRandomHand();
+        }
     </script>
 </head>
 <body>
