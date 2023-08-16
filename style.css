@@ -5,10 +5,12 @@
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
 #hand {
     font-size: 5em;
     padding: 0.5em;
 }
+
 button {
     font-size: 2em;
     padding: 0.5em 1em;
