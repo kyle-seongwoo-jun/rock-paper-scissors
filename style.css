@@ -1,3 +1,11 @@
+#statistics {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5em;
+    font-size: 1.75em;
+}
+
 #center {
     position: absolute;
     top: 50%;
