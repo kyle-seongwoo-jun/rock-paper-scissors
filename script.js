@@ -44,8 +44,11 @@ function showRandomHand() {
   }
 
   // Update HTML
+  const div = document.getElementById("history");
+  const h1 = document.getElementById("hand");
   updateStatistics();
-  document.getElementById("hand").innerHTML = `${history.length} ${hand}`;
+  div.innerHTML += `${h1.innerHTML} `;
+  h1.innerHTML = `${history.length} ${hand}`;
 }
 
 function updateStatistics() {
