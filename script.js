@@ -1,11 +1,14 @@
+// Check if window.crypto.getRandomValues() is available
+const useWindowCrypto = window.crypto && window.crypto.getRandomValues;
+
 function getRandomInt(min, max) {
     let randomInt;
-    if (window.crypto && window.crypto.getRandomValues) {
+    if (useWindowCrypto) {
         // Generate a cryptographically secure random integer between min and max
         let randomBytes = new Uint32Array(1);
         do {
-        window.crypto.getRandomValues(randomBytes);
-        randomInt = randomBytes[0] % (max - min + 1) + min;
+            window.crypto.getRandomValues(randomBytes);
+            randomInt = randomBytes[0] % (max - min + 1) + min;
         } while (randomInt > max);
     } else {
         // Fallback to Math.random() if window.crypto.getRandomValues() is not available
@@ -14,7 +17,7 @@ function getRandomInt(min, max) {
     return randomInt;
 }
 
-function getHand() {
+function getRandomHand() {
     let hand = getRandomInt(1, 3);
     switch (hand) {
         case 1:
@@ -28,7 +31,7 @@ function getHand() {
 
 let trial = 0;
 function showRandomHand() {
-    let hand = getHand();
+    let hand = getRandomHand();
     document.getElementById("hand").innerHTML = `${++trial} ${hand}`;
 }
 
